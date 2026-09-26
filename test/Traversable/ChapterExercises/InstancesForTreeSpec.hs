@@ -8,4 +8,4 @@ import Traversable.ChapterExercises.InstancesForTree
 
 spec :: Spec
 spec = do
-    testBatch $ traversable (undefined :: Tree (Int, Int, [Int]))
+    testBatch $ traversable (undefined :: Tree (Maybe Int, Maybe Int, Int, [Int]))

@@ -22,7 +22,7 @@ instance (Arbitrary a) => Arbitrary (Identity a) where
 instance (Eq a) => EqProp (Identity a) where (=-=) = eq
 
 -- Constant
-newtype Constant a b = Constant { getConstant :: a }
+newtype Constant a b = Constant {getConstant :: a}
     deriving (Eq, Ord, Show)
 
 instance Functor (Constant a) where
@@ -40,9 +40,10 @@ instance (Arbitrary a) => Arbitrary (Constant a b) where
 instance (Eq a) => EqProp (Constant a b) where (=-=) = eq
 
 -- Maybe
-data Optional a = Nada
-                | Yep a
-                deriving (Eq, Ord, Show)
+data Optional a
+    = Nada
+    | Yep a
+    deriving (Eq, Ord, Show)
 
 instance Functor Optional where
     fmap _ Nada = Nada
@@ -69,9 +70,10 @@ instance (Arbitrary a) => Arbitrary (Optional a) where
 
 instance (Eq a) => EqProp (Optional a) where (=-=) = eq
 
-data List a = Nil
-            | Cons a (List a)
-            deriving (Eq, Ord, Show)
+data List a
+    = Nil
+    | Cons a (List a)
+    deriving (Eq, Ord, Show)
 
 instance Functor List where
     fmap _ Nil = Nil
@@ -84,12 +86,15 @@ instance Foldable List where
 instance Traversable List where
     traverse _ Nil = pure Nil
     traverse f (Cons a as) = Cons <$> f a <*> traverse f as
-    
-instance Arbitrary a => Arbitrary (List a) where
-    arbitrary = do
-        a <- arbitrary
-        as <- arbitrary
-        elements [Nil, Cons a as]
+
+instance (Arbitrary a) => Arbitrary (List a) where
+    arbitrary = sized go
+      where
+        go 0 = pure Nil
+        go n = do
+            a <- arbitrary
+            as <- go (n `div` 2)
+            elements [Nil, Cons a as]
 
 instance (Eq a) => EqProp (List a) where (=-=) = eq
 
@@ -124,7 +129,7 @@ instance Foldable (Three' a) where
 instance Traversable (Three' a) where
     traverse f (Three' a b b') = Three' a <$> f b <*> f b'
 
-instance (Arbitrary a, Arbitrary b) => Arbitrary (Three' a b)  where
+instance (Arbitrary a, Arbitrary b) => Arbitrary (Three' a b) where
     arbitrary = Three' <$> arbitrary <*> arbitrary <*> arbitrary
 
 instance (Eq a, Eq b) => EqProp (Three' a b) where (=-=) = eq

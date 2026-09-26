@@ -23,5 +23,5 @@ cabal.project.local~
 .ghc.environment.*
 
 # Custom
-haskell-programming-from-first-principles.cabal
+#haskell-programming-from-first-principles.cabal
 *~

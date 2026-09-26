@@ -1,0 +1,420 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.39.6.
+--
+-- see: https://github.com/sol/hpack
+
+name:           haskell-programming-from-first-principles
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/BoeingX/haskell-programming-from-first-principles#readme>
+homepage:       https://github.com/BoeingX/haskell-programming-from-first-principles#readme
+bug-reports:    https://github.com/BoeingX/haskell-programming-from-first-principles/issues
+author:         BoeingX
+maintainer:     user@domain.com
+copyright:      BSD3
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/BoeingX/haskell-programming-from-first-principles
+
+library
+  exposed-modules:
+      AlgebraicDataTypes.BinaryTree.ConvertBinaryTreesToLists
+      AlgebraicDataTypes.BinaryTree.WriteFoldrForBinaryTree
+      AlgebraicDataTypes.BinaryTree.WriteMapForBinaryTree
+      AlgebraicDataTypes.ChapterExercises.AsPatterns
+      AlgebraicDataTypes.ChapterExercises.Ciphers
+      AlgebraicDataTypes.ChapterExercises.HuttonRazor
+      AlgebraicDataTypes.ChapterExercises.LanguageExercises
+      AlgebraicDataTypes.ChapterExercises.PhoneExercise
+      AlgebraicDataTypes.ConstructingAndDeconstructingValues.Exercise
+      AlgebraicDataTypes.ProductTypes.JamminExercises
+      AlgebraicDataTypes.WhatIsTypeAndWhatIsData.IntermissionExercises
+      AlgebraicDataTypes.WhatMakesDataTypesAlgebraic.NewType
+      Applicative.ApplicativeInUse.ConstantExercise
+      Applicative.ApplicativeInUse.IdentityExercise
+      Applicative.ApplicativeInUse.MaybeExercise
+      Applicative.ApplicativeInUse.ShortExercises
+      Applicative.ChapterExercises.ApplicativeInstances
+      Applicative.ChapterExercises.Combinations
+      Applicative.ZipListMonoid.ListApplicativeExercise
+      Applicative.ZipListMonoid.ValidationExercise
+      Applicative.ZipListMonoid.ZipListApplicativeExercise
+      BasicDatatypes.ChapterExercises.Awesome
+      BasicDatatypes.ChapterExercises.ReadingSyntax
+      BasicDatatypes.ComparingValues.IntermissionExercises
+      BasicLibraries.ChapterExercises.DifferenceList
+      BasicLibraries.ChapterExercises.Queue
+      BuildingProjects.ChapterExercises.ModifyingCode.GimmePerson
+      BuildingProjects.ChapterExercises.ModifyingCode.HangmanGameLogic
+      BuildingProjects.ChapterExercises.ModifyingCode.Palindrome
+      ComposingTypes.IntermissionExercises.Bifunctor
+      ComposingTypes.IntermissionExercises.FoldableAndTraversableForCompose
+      ComposingTypes.Twinplicative.Exercise
+      Foldable.ChapterExercises.WriteFilterFunction
+      Foldable.ChapterExercises.WriteFoldableInstances
+      Foldable.SomeBasicDerivedOperations.Exercises
+      FoldingLists.ChapterExercises.RewritingFunctionsUsingFolds
+      FoldingLists.ChapterExercises.WarmUpAndReview
+      FoldingLists.HowToWriteFoldFunctions.IntermissionExercises
+      FoldingLists.Scans.ScansExercises
+      Functor.ChapterExercises.RearrangeArguments
+      Functor.ChapterExercises.WriteFunctorInstances
+      Functor.CommonlyUsedFunctors.LiftingExercises
+      Functor.IgnoringPossibilities.ShortExercise
+      Functor.IntermissionExercises.IntermissionExercises
+      Lists.ChapterExercises.Char
+      Lists.ChapterExercises.Ciphers
+      Lists.ChapterExercises.WritingYourOwnStandardFunctions
+      Lists.ExtractingPortionsOfLists.IntermissionExercises
+      Lists.FilteringListsOfValues.IntermissionExercises
+      Lists.ListComprehensions.IntermissionExercises
+      Lists.UsingRangesToConstructLists.Exercise
+      Lists.ZippingLists.ZippingExercises
+      Monad.ChapterExercises.RewriteFunctions
+      Monad.ChapterExercises.WriteMonadInstances
+      Monad.ExampleOfMonadUse.Exercise
+      Monad.Monad.Exercise
+      MonadTransformers.ChapterExercises.FixTheCode
+      MonadTransformers.ChapterExercises.HitCounter
+      MonadTransformers.ChapterExercises.Morra
+      MonadTransformers.ChapterExercises.WriteTheCode
+      MonadTransformers.EitherT.Exercises
+      MonadTransformers.LexicallyInnerIsStructurallyOuter.Exercise
+      MonadTransformers.MonadIO.Exercises
+      MonadTransformers.MonadTrans.Exercises
+      MonadTransformers.StateT.Exercises
+      Monoid.BetterLivingThroughQuickCheck.IntermissionExercise
+      Monoid.ChapterExercises.MonoidExercises
+      Monoid.ChapterExercises.SemigroupExercises
+      Monoid.Madness.Exercise
+      Monoid.ReusingAlgebras.Exercise
+      MoreFunctionalPatterns.CaseExpressions.IntermissionExercises
+      MoreFunctionalPatterns.ChapterExercises.LetUsWriteCode
+      MoreFunctionalPatterns.HigherOrderFunctions.IntermissionExercises
+      ParserCombinators.Alternative.IntermissionExercise
+      ParserCombinators.ChapterExercises.IPV4Addresses
+      ParserCombinators.ChapterExercises.IPV6Addresses
+      ParserCombinators.ChapterExercises.LogFile
+      ParserCombinators.ChapterExercises.ParseDigitAndInteger
+      ParserCombinators.ChapterExercises.PhoneNumbers
+      ParserCombinators.ChapterExercises.SemanticVersions
+      ParserCombinators.ParsingFractions.IntermissionExercise
+      ParserCombinators.UnderstandingTheParsingProcess.IntermissionExercises
+      Reader.ButUhReader.Exercise
+      Reader.ChapterExercises.WarmUpStretch
+      Reader.FunctionsHaveAnApplicativeToo.Exercise
+      Reader.Reader.ShortExercise
+      Reader.TheMonadOfFunctions.Exercise
+      Recursion.ChapterExercises.FixingDividedBy
+      Recursion.ChapterExercises.McCarthy91Function
+      Recursion.ChapterExercises.NumbersIntoWords
+      Recursion.ChapterExercises.Recursion
+      SignalingAdversity.ChapterExercises.IterateAndUnfoldr
+      SignalingAdversity.ChapterExercises.ItIsOnlyNatural
+      SignalingAdversity.ChapterExercises.SmallLibraryForEither
+      SignalingAdversity.ChapterExercises.SmallLibraryForMaybe
+      SignalingAdversity.ChapterExercises.SomethingOtherThanList
+      SignalingAdversity.ChapterExercises.StringProcessing
+      SignalingAdversity.ChapterExercises.ValidateTheWord
+      State.ChapterExercises.Exercises
+      State.GetACodingJobWithOneWierdTrick.FizzbuzzDifferently
+      State.ThrowDown.Exercises
+      State.WriteStateForYourself.Exercise
+      Strings.ChapterExercises.BuildingFunctions
+      Testing.ChapterExercises.Idempotence
+      Testing.ChapterExercises.MakeAGenRandomGeneratorForTheDataType
+      Testing.ChapterExercises.UsingQuickCheck
+      Testing.ChapterExercises.ValidatingNumbersIntoWords
+      Testing.ConventionalTesting.IntermissionExercise
+      Traversable.ChapterExercises.InstancesForTree
+      Traversable.ChapterExercises.TraversableInstances
+      Typeclasses.ChapterExercises.TypeKwonDo
+      Typeclasses.WritingTypeclassInstances.IntermissionExercises
+      Types.ChapterExercises.FixIt
+      Types.ChapterExercises.GivenATypeWriteTheFunction
+      Types.ChapterExercises.TypeKwonDo
+      Types.ChapterExercises.WriteATypeSignature
+      Types.Polymorphism.IntermissionExercises
+  other-modules:
+      Paths_haskell_programming_from_first_principles
+  hs-source-dirs:
+      src
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , checkers
+    , containers
+    , hspec
+    , hspec-checkers
+    , parsers
+    , random
+    , raw-strings-qq
+    , scotty
+    , split
+    , text
+    , time
+    , transformers
+    , trifecta
+    , wai
+  default-language: GHC2024
+
+test-suite haskell-programming-from-first-principles-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      AlgebraicDataTypes.BinaryTree.ConvertBinaryTreesToListsSpec
+      AlgebraicDataTypes.BinaryTree.WriteFoldrForBinaryTreeSpec
+      AlgebraicDataTypes.BinaryTree.WriteMapForBinaryTreeSpec
+      AlgebraicDataTypes.ChapterExercises.AsPatternsSpec
+      AlgebraicDataTypes.ChapterExercises.CiphersSpec
+      AlgebraicDataTypes.ChapterExercises.HuttonRazorSpec
+      AlgebraicDataTypes.ChapterExercises.LanguageExercisesSpec
+      AlgebraicDataTypes.ChapterExercises.PhoneExerciseSpec
+      AlgebraicDataTypes.ConstructingAndDeconstructingValues.ExerciseSpec
+      AlgebraicDataTypes.ProductTypes.JamminExercisesSpec
+      Applicative.ApplicativeInUse.ConstantExerciseSpec
+      Applicative.ApplicativeInUse.IdentityExerciseSpec
+      Applicative.ChapterExercises.ApplicativeInstancesSpec
+      Applicative.ChapterExercises.CombinationsSpec
+      Applicative.ZipListMonoid.ListApplicativeExerciseSpec
+      Applicative.ZipListMonoid.ValidationExerciseSpec
+      Applicative.ZipListMonoid.ZipListApplicativeExerciseSpec
+      Foldable.ChapterExercises.WriteFilterFunctionSpec
+      Foldable.ChapterExercises.WriteFoldableInstancesSpec
+      Foldable.SomeBasicDerivedOperations.ExercisesSpec
+      FoldingLists.ChapterExercises.RewritingFunctionsUsingFoldsSpec
+      FoldingLists.HowToWriteFoldFunctions.IntermissionExercisesSpec
+      FoldingLists.Scans.ScansExercisesSpec
+      Functor.ChapterExercises.RearrangeArgumentsSpec
+      Functor.CommonlyUsedFunctors.LiftingExercisesSpec
+      Functor.IgnoringPossibilities.ShortExerciseSpec
+      Functor.IntermissionExercises.IntermissionExercisesSpec
+      Lists.ChapterExercises.CharSpec
+      Lists.ChapterExercises.CiphersSpec
+      Lists.ChapterExercises.WritingYourOwnStandardFunctionsSpec
+      Lists.ExtractingPortionsOfLists.IntermissionExercisesSpec
+      Lists.FilteringListsOfValues.IntermissionExercisesSpec
+      Lists.UsingRangesToConstructLists.ExerciseSpec
+      Lists.ZippingLists.ZippingExercisesSpec
+      Monad.ChapterExercises.RewriteFunctionsSpec
+      Monad.ChapterExercises.WriteMonadInstancesSpec
+      Monad.ExampleOfMonadUse.ExerciseSpec
+      Monad.Monad.ExerciseSpec
+      MonadTransformers.ChapterExercises.WriteTheCodeSpec
+      Monoid.ChapterExercises.MonoidExercisesSpec
+      Monoid.ChapterExercises.SemigroupExercisesSpec
+      Monoid.ReusingAlgebras.ExerciseSpec
+      MoreFunctionalPatterns.ChapterExercises.LetUsWriteCodeSpec
+      ParserCombinators.Alternative.IntermissionExerciseSpec
+      ParserCombinators.ChapterExercises.IPV4AddressesSpec
+      ParserCombinators.ChapterExercises.IPV6AddressesSpec
+      ParserCombinators.ChapterExercises.LogFileSpec
+      ParserCombinators.ChapterExercises.ParseDigitAndIntegerSpec
+      ParserCombinators.ChapterExercises.PhoneNumbersSpec
+      ParserCombinators.ChapterExercises.SemanticVersionsSpec
+      ParserCombinators.ParsingFractions.IntermissionExerciseSpec
+      ParserCombinators.UnderstandingTheParsingProcess.IntermissionExercisesSpec
+      Reader.ButUhReader.ExerciseSpec
+      Reader.ChapterExercises.WarmUpStretchSpec
+      Reader.FunctionsHaveAnApplicativeToo.ExerciseSpec
+      Reader.Reader.ShortExerciseSpec
+      Recursion.ChapterExercises.FixingDividedBySpec
+      Recursion.ChapterExercises.McCarthy91FunctionSpec
+      Recursion.ChapterExercises.NumbersIntoWordsSpec
+      Recursion.ChapterExercises.RecursionSpec
+      SignalingAdversity.ChapterExercises.IterateAndUnfoldrSpec
+      SignalingAdversity.ChapterExercises.ItIsOnlyNaturalSpec
+      SignalingAdversity.ChapterExercises.SmallLibraryForMaybeSpec
+      SignalingAdversity.ChapterExercises.SomethingOtherThanListSpec
+      SignalingAdversity.ChapterExercises.StringProcessingSpec
+      State.ChapterExercises.ExercisesSpec
+      State.GetACodingJobWithOneWierdTrick.FizzbuzzDifferentlySpec
+      State.ThrowDown.ExercisesSpec
+      State.WriteStateForYourself.ExerciseSpec
+      Testing.ChapterExercises.IdempotenceSpec
+      Testing.ChapterExercises.UsingQuickCheckSpec
+      Testing.ChapterExercises.ValidatingNumbersIntoWordsSpec
+      Testing.ConventionalTesting.IntermissionExerciseSpec
+      Traversable.ChapterExercises.InstancesForTreeSpec
+      Traversable.ChapterExercises.TraversableInstancesSpec
+      Paths_haskell_programming_from_first_principles
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base >=4.7 && <5
+    , bytestring
+    , checkers
+    , containers
+    , haskell-programming-from-first-principles
+    , hspec
+    , hspec-checkers
+    , parsers
+    , random
+    , raw-strings-qq
+    , scotty
+    , split
+    , text
+    , time
+    , transformers
+    , trifecta
+    , wai
+  default-language: GHC2024
+
+benchmark haskell-programming-from-first-principles-benchmark
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  other-modules:
+      AlgebraicDataTypes.BinaryTree.ConvertBinaryTreesToLists
+      AlgebraicDataTypes.BinaryTree.WriteFoldrForBinaryTree
+      AlgebraicDataTypes.BinaryTree.WriteMapForBinaryTree
+      AlgebraicDataTypes.ChapterExercises.AsPatterns
+      AlgebraicDataTypes.ChapterExercises.Ciphers
+      AlgebraicDataTypes.ChapterExercises.HuttonRazor
+      AlgebraicDataTypes.ChapterExercises.LanguageExercises
+      AlgebraicDataTypes.ChapterExercises.PhoneExercise
+      AlgebraicDataTypes.ConstructingAndDeconstructingValues.Exercise
+      AlgebraicDataTypes.ProductTypes.JamminExercises
+      AlgebraicDataTypes.WhatIsTypeAndWhatIsData.IntermissionExercises
+      AlgebraicDataTypes.WhatMakesDataTypesAlgebraic.NewType
+      Applicative.ApplicativeInUse.ConstantExercise
+      Applicative.ApplicativeInUse.IdentityExercise
+      Applicative.ApplicativeInUse.MaybeExercise
+      Applicative.ApplicativeInUse.ShortExercises
+      Applicative.ChapterExercises.ApplicativeInstances
+      Applicative.ChapterExercises.Combinations
+      Applicative.ZipListMonoid.ListApplicativeExercise
+      Applicative.ZipListMonoid.ValidationExercise
+      Applicative.ZipListMonoid.ZipListApplicativeExercise
+      BasicDatatypes.ChapterExercises.Awesome
+      BasicDatatypes.ChapterExercises.ReadingSyntax
+      BasicDatatypes.ComparingValues.IntermissionExercises
+      BasicLibraries.ChapterExercises.DifferenceList
+      BasicLibraries.ChapterExercises.Queue
+      BuildingProjects.ChapterExercises.ModifyingCode.GimmePerson
+      BuildingProjects.ChapterExercises.ModifyingCode.HangmanGameLogic
+      BuildingProjects.ChapterExercises.ModifyingCode.Palindrome
+      ComposingTypes.IntermissionExercises.Bifunctor
+      ComposingTypes.IntermissionExercises.FoldableAndTraversableForCompose
+      ComposingTypes.Twinplicative.Exercise
+      Foldable.ChapterExercises.WriteFilterFunction
+      Foldable.ChapterExercises.WriteFoldableInstances
+      Foldable.SomeBasicDerivedOperations.Exercises
+      FoldingLists.ChapterExercises.RewritingFunctionsUsingFolds
+      FoldingLists.ChapterExercises.WarmUpAndReview
+      FoldingLists.HowToWriteFoldFunctions.IntermissionExercises
+      FoldingLists.Scans.ScansExercises
+      Functor.ChapterExercises.RearrangeArguments
+      Functor.ChapterExercises.WriteFunctorInstances
+      Functor.CommonlyUsedFunctors.LiftingExercises
+      Functor.IgnoringPossibilities.ShortExercise
+      Functor.IntermissionExercises.IntermissionExercises
+      Lists.ChapterExercises.Char
+      Lists.ChapterExercises.Ciphers
+      Lists.ChapterExercises.WritingYourOwnStandardFunctions
+      Lists.ExtractingPortionsOfLists.IntermissionExercises
+      Lists.FilteringListsOfValues.IntermissionExercises
+      Lists.ListComprehensions.IntermissionExercises
+      Lists.UsingRangesToConstructLists.Exercise
+      Lists.ZippingLists.ZippingExercises
+      Monad.ChapterExercises.RewriteFunctions
+      Monad.ChapterExercises.WriteMonadInstances
+      Monad.ExampleOfMonadUse.Exercise
+      Monad.Monad.Exercise
+      MonadTransformers.ChapterExercises.FixTheCode
+      MonadTransformers.ChapterExercises.HitCounter
+      MonadTransformers.ChapterExercises.Morra
+      MonadTransformers.ChapterExercises.WriteTheCode
+      MonadTransformers.EitherT.Exercises
+      MonadTransformers.LexicallyInnerIsStructurallyOuter.Exercise
+      MonadTransformers.MonadIO.Exercises
+      MonadTransformers.MonadTrans.Exercises
+      MonadTransformers.StateT.Exercises
+      Monoid.BetterLivingThroughQuickCheck.IntermissionExercise
+      Monoid.ChapterExercises.MonoidExercises
+      Monoid.ChapterExercises.SemigroupExercises
+      Monoid.Madness.Exercise
+      Monoid.ReusingAlgebras.Exercise
+      MoreFunctionalPatterns.CaseExpressions.IntermissionExercises
+      MoreFunctionalPatterns.ChapterExercises.LetUsWriteCode
+      MoreFunctionalPatterns.HigherOrderFunctions.IntermissionExercises
+      ParserCombinators.Alternative.IntermissionExercise
+      ParserCombinators.ChapterExercises.IPV4Addresses
+      ParserCombinators.ChapterExercises.IPV6Addresses
+      ParserCombinators.ChapterExercises.LogFile
+      ParserCombinators.ChapterExercises.ParseDigitAndInteger
+      ParserCombinators.ChapterExercises.PhoneNumbers
+      ParserCombinators.ChapterExercises.SemanticVersions
+      ParserCombinators.ParsingFractions.IntermissionExercise
+      ParserCombinators.UnderstandingTheParsingProcess.IntermissionExercises
+      Reader.ButUhReader.Exercise
+      Reader.ChapterExercises.WarmUpStretch
+      Reader.FunctionsHaveAnApplicativeToo.Exercise
+      Reader.Reader.ShortExercise
+      Reader.TheMonadOfFunctions.Exercise
+      Recursion.ChapterExercises.FixingDividedBy
+      Recursion.ChapterExercises.McCarthy91Function
+      Recursion.ChapterExercises.NumbersIntoWords
+      Recursion.ChapterExercises.Recursion
+      SignalingAdversity.ChapterExercises.IterateAndUnfoldr
+      SignalingAdversity.ChapterExercises.ItIsOnlyNatural
+      SignalingAdversity.ChapterExercises.SmallLibraryForEither
+      SignalingAdversity.ChapterExercises.SmallLibraryForMaybe
+      SignalingAdversity.ChapterExercises.SomethingOtherThanList
+      SignalingAdversity.ChapterExercises.StringProcessing
+      SignalingAdversity.ChapterExercises.ValidateTheWord
+      State.ChapterExercises.Exercises
+      State.GetACodingJobWithOneWierdTrick.FizzbuzzDifferently
+      State.ThrowDown.Exercises
+      State.WriteStateForYourself.Exercise
+      Strings.ChapterExercises.BuildingFunctions
+      Testing.ChapterExercises.Idempotence
+      Testing.ChapterExercises.MakeAGenRandomGeneratorForTheDataType
+      Testing.ChapterExercises.UsingQuickCheck
+      Testing.ChapterExercises.ValidatingNumbersIntoWords
+      Testing.ConventionalTesting.IntermissionExercise
+      Traversable.ChapterExercises.InstancesForTree
+      Traversable.ChapterExercises.TraversableInstances
+      Typeclasses.ChapterExercises.TypeKwonDo
+      Typeclasses.WritingTypeclassInstances.IntermissionExercises
+      Types.ChapterExercises.FixIt
+      Types.ChapterExercises.GivenATypeWriteTheFunction
+      Types.ChapterExercises.TypeKwonDo
+      Types.ChapterExercises.WriteATypeSignature
+      Types.Polymorphism.IntermissionExercises
+      BasicLibraries.ChapterExercises.DifferenceListBenchmark
+      BasicLibraries.ChapterExercises.QueueBenchmark
+      Paths_haskell_programming_from_first_principles
+  hs-source-dirs:
+      src
+      benchmark
+  ghc-options: -O2 -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      QuickCheck
+    , base
+    , bytestring
+    , checkers
+    , containers
+    , criterion
+    , hspec
+    , hspec-checkers
+    , parsers
+    , random
+    , raw-strings-qq
+    , scotty
+    , split
+    , text
+    , time
+    , transformers
+    , trifecta
+    , wai
+  default-language: GHC2024

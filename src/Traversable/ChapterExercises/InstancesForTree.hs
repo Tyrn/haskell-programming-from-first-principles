@@ -3,10 +3,11 @@ module Traversable.ChapterExercises.InstancesForTree where
 import Test.QuickCheck
 import Test.QuickCheck.Checkers
 
-data Tree a = Empty
-            | Leaf a
-            | Node (Tree a) a (Tree a)
-            deriving (Eq, Show)
+data Tree a
+    = Empty
+    | Leaf a
+    | Node (Tree a) a (Tree a)
+    deriving (Eq, Show)
 
 instance Functor Tree where
     fmap _ Empty = Empty
@@ -24,10 +25,13 @@ instance Traversable Tree where
     traverse f (Node l a r) = Node <$> traverse f l <*> f a <*> traverse f r
 
 instance (Arbitrary a) => Arbitrary (Tree a) where
-    arbitrary = do
-        a <- arbitrary
-        l <- arbitrary
-        r <- arbitrary
-        elements [Empty, Leaf a, Node l a r]
+    arbitrary = sized tree
+      where
+        tree 0 = pure Empty
+        tree n = do
+            a <- arbitrary
+            l <- tree (n `div` 2)
+            r <- tree (n `div` 2)
+            elements [Empty, Leaf a, Node l a r]
 
 instance (Eq a) => EqProp (Tree a) where (=-=) = eq
