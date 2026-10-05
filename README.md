@@ -1,60 +1,37 @@
 # Haskell Programming from First Principles
-[![Build Status](https://travis-ci.org/BoeingX/haskell-programming-from-first-principles.svg?branch=master)](https://travis-ci.org/BoeingX/haskell-programming-from-first-principles)
-[![CircleCI](https://circleci.com/gh/BoeingX/haskell-programming-from-first-principles/tree/master.svg?style=svg)](https://circleci.com/gh/BoeingX/haskell-programming-from-first-principles/tree/master)
-[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
-This repository hosts my notes and solutions to exercises in the book
-[Haskell Programming from First Principles](http://haskellbook.com/).
+This is a fork from [this](https://github.com/BoeingX/haskell-programming-from-first-principles)
+excellent project.
 
-## Dependencies
+What has changed:
 
-The only dependency is [Stack](https://docs.haskellstack.org/en/stable/README/). 
-Once setup, Stack takes care of any Haskell package dependencies.
+- The ecosystem moved from _Haskell 2010_ to _GHC2024_
 
-## Project structure
+- Stack dropped in favor of Cabal
 
-This repository is organized as a single Stack project as follows
-```
-.
-├── benchmark/
-├── ChangeLog.md
-├── haskell-programming-from-first-principles.cabal
-├── LICENSE
-├── package.yaml
-├── README.md
-├── Setup.hs
-├── src/
-├── stack.yaml
-└── test/
-```
-where [src](./src) are solutions whose name follows the pattern
-```
-ChapterName/SectionName/ExerciseName.hs
-```
-[test](./test/) and [benchmark](./benchmark) are test and benchmark suites following
-the same naming convention.
+- The necessary
+  [source changes](https://github.com/Tyrn/haskell-programming-from-first-principles/commit/2ee97a06d7a3360a00db5fcedd2774ad51fbd256)
+  made (not a lot of them)
 
-## Run tests
+## Usage
 
-All test suites can be discovered by `hspec-discover`. To run tests, simply do
+- Install `ghc` via [GHCup](https://www.haskell.org/ghcup/install/).
+  With Arch Linux, `ghcup-hs-bin` package will do
+
+- Play with tests
 
 ```bash
-stack test
+cabal test
 ```
-or
-```bash
-stack --fast test
-```
-if you want avoid GHC optimization (hence faster).
-
-## Run benchmarks
-
-Run
 
 ```bash
-stack bench
+cabal bench
 ```
 
-> **Never** use the `--fast` flag for benchmarks otherwise you will get **wrong** results.
+```bash
+cabal clean
+```
 
-Reference benchmark results are included in each benchmark file as block comment.
+```bash
+./test.sh -h
+```
